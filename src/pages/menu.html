@@ -1,31 +1,25 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>ALVIN bar</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../scss/main.scss" />
     <link rel="shortcut icon" href="../img/favicon.png" type="png" />
-    <!-- <span
-      >⎛⎝(•ⱅ•)⎠⎞ Hey you, what's up? You like this website right? So instead of
-      stealing my code why did you don't ask me on discord huh? VirisKha#8008...I
-      got you;)
-    </span> -->
+    <title>ALVIN bar - Menu</title>
   </head>
   <body>
-    <div id="top"></div>
     <header>
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="in-header">
-              <a href="#top" class="logo-header">
+              <a href="index.html" class="logo-header">
                 <img src="../img/logo-tiny.svg" alt="logo site" />
               </a>
               <span class="icons menu-trigger-add"></span>
               <nav class="menu">
                 <span class="icons menu-trigger-rmv"></span>
-                <a href="#top" class="button selected"
+                <a href="index.html" class="button"
                   >Home
                   <div class="underline"></div>
                 </a>
@@ -33,7 +27,7 @@
                   >Events
                   <div class="underline"></div>
                 </a>
-                <a href="menu.html" class="button"
+                <a href="menu.html" class="button selected"
                   >Menu
                   <div class="underline"></div>
                 </a>
@@ -46,11 +40,7 @@
                   <div class="underline"></div>
                 </a>
                 <a href="cart.html">
-                  <span class="icons nav-ico cart-ico">
-                    <span class="cart-clean"></span>
-                    <span class="cart-check"></span>
-                    <span class="cart-alert"></span>
-                  </span>
+                  <span class="icons nav-ico"></span>
                 </a>
               </nav>
             </div>
@@ -59,147 +49,119 @@
       </div>
       <progress max="100" value="0"></progress>
     </header>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-xxl-10">
-          <div class="giant-logo-cont">
-            <img
-              src="../img/giant-logo.svg"
-              alt="the entire logo of Alvin bar"
-              class="giant-logo"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-container-header">
-      <span class="text-anim"
-        >TECHNO · MUSIC · COCKTAILS · TECHNO · MUSIC · COCKTAILS · TECHNO ·
-        MUSIC · COCKTAILS · TECHNO · MUSIC · COCKTAILS · TECHNO · MUSIC ·
-        COCKTAILS · TECHNO · MUSIC · COCKTAILS · TECHNO · MUSIC · COCKTAILS ·
-        TECHNO · MUSIC · COCKTAILS · TECHNO · MUSIC · COCKTAILS · TECHNO · MUSIC
-        · COCKTAILS ·</span
-      >
-    </div>
     <main>
-      <div class="bg-card-founder">
-        <div class="bg-special-fx">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-xxl-10">
-                <div class="card-founder">
-                  <span class="micro-title">Philosophy</span>
-                  <p>
-                    Founded in 1982, Alvin is a bar in the center of Berlin well
-                    known for its techno music and open minded
-                    frequentations.<br />Concerts, cocktails, hypnotic rythms…
-                    All you need for a night out.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <section class="events" id="events">
-        <div class="background-shaped">
-          <div class="shapes line-bg"></div>
-          <div class="shapes square-bg"></div>
-          <div class="shapes circle-bg"></div>
-        </div>
+      <section class="cocktails" id="cocktails">
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <h2>Events</h2>
+              <div class="title-section">
+                <h2>SNACKS</h2>
+                <p>You can also eat some of our best snacks!</p>
+              </div>
             </div>
-            <article class="event-article">
-              <div class="row">
-                <div class="col-12 col-lg-6 order-0">
-                  <figure class="trigger">
-                    <img
-                      src="../img/machine-girl.webp"
-                      alt="machine girl team"
-                    />
-                    <figcaption class="cover-square">
-                      <div class="CS-input">
-                        <a href="events.html">Get your tickets now</a>
-                      </div>
-                    </figcaption>
-                  </figure>
+            <div class="col-12 col-lg-6">
+              <div class="line l-top"></div>
+              <article class="cocktail-article">
+                <h3 class="cocktail-title">French fries</h3>
+                <p>Potatoes and salt, available with sauces</p>
+                <div class="price-container">
+                  <span class="ct-art-price">5 €</span>
                 </div>
-                <div class="col-12 col-lg-6 order-1 align-self-center">
-                  <div class="article-info">
-                    <span class="article-date">10.12.2022</span>
-                    <h3 class="article-title">Machine Girl</h3>
-                    <p class="article-resume">
-                      Machine Girl (sometimes stylized as machin3gir1) is an
-                      American electronic music project created in 2012 by Matt
-                      Stephenson on Long Island, New York.
-                    </p>
-                  </div>
+              </article>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="line"></div>
+              <article class="cocktail-article">
+                <h3 class="cocktail-title">Cheese Nachos</h3>
+                <p>Nachos and hot cheese</p>
+                <div class="price-container">
+                  <span class="ct-art-price">5.10 €</span>
                 </div>
-              </div>
-            </article>
-            <article class="event-article">
-              <div class="row">
-                <div class="col-12 col-lg-6 order-lg-3">
-                  <figure class="trigger">
-                    <img src="../img/goffbaby.webp" alt="goffbaby portrait" />
-                    <figcaption class="cover-square">
-                      <div class="CS-input">
-                        <a href="events.html">Get your tickets now</a>
-                      </div>
-                    </figcaption>
-                  </figure>
+              </article>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="line l-top"></div>
+              <article class="cocktail-article">
+                <h3 class="cocktail-title">Animal Nachos</h3>
+                <p>Nachos, cheese and bacon</p>
+                <div class="price-container">
+                  <span class="ct-art-price">8.50 €</span>
                 </div>
-                <div class="col-12 col-lg-6 order-lg-2 align-self-center">
-                  <div class="article-info article-info-left-side">
-                    <span class="article-date">11.12.2022</span>
-                    <h3 class="article-title">Goffbaby</h3>
-                    <p class="article-resume">
-                      Goffbaby is a DJ and Producer from the Vevey region in
-                      Switzerland.
-                    </p>
-                  </div>
+              </article>
+              <div class="line l-bottom desk-only"></div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="line l-top"></div>
+              <article class="cocktail-article">
+                <h3 class="cocktail-title">Chicken tenders</h3>
+                <p>Fried chicken with love <3</p>
+                <div class="price-container">
+                  <span class="ct-art-price">8.50 €</span>
                 </div>
-              </div>
-            </article>
-            <article class="event-article">
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <figure class="trigger">
-                    <img
-                      src="../img/nia-archives.webp"
-                      alt="nia archives portrait"
-                    />
-                    <figcaption class="cover-square">
-                      <div class="CS-input">
-                        <a href="events.html">Get your tickets now</a>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class="col-12 col-lg-6 align-self-center">
-                  <div class="article-info">
-                    <span class="article-date">14.12.2022</span>
-                    <h3 class="article-title">Nia Archives</h3>
-                    <p class="article-resume">
-                      With her haunting voice, Nia Archives is an all-around
-                      artist with a promising future on the jungle and drum and
-                      bass scene.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </article>
+              </article>
+              <div class="line l-bottom"></div>
+            </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-4">
-              <div class="btn-container">
-                <a href="events.html" class="btn-more"
-                  >See more <span class="icons"></span>
+        </div>
+      </section>
+      <section class="cocktails" id="cocktails">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="title-section burger">
+                <h2>BURGERS</h2>
+                <p>Try the burgers from</p>
+                <a
+                  href="https://thomas-rouiller.at-eikon.ch/colas/"
+                  class="button"
+                  >./ Cola's Burgers™
+                  <div class="underline"></div>
                 </a>
               </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="line l-top"></div>
+              <article class="cocktail-article">
+                <h3 class="cocktail-title">Cheese-Burger</h3>
+                <p>Bread, beef, cheese, salad, tomatoes, onions</p>
+                <div class="price-container">
+                  <span class="ct-art-price">7 €</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="line"></div>
+              <article class="cocktail-article">
+                <h3 class="cocktail-title">Beef-bacon</h3>
+                <p>Bread, beef, cheese, salad, tomatoes, onions, bacon</p>
+                <div class="price-container">
+                  <span class="ct-art-price">8.10 €</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="line l-top"></div>
+              <article class="cocktail-article">
+                <h3 class="cocktail-title">Crusty-krab</h3>
+                <p>Bread, fried chiken, cheese, salad, tomatoes, onions</p>
+                <div class="price-container">
+                  <span class="ct-art-price">8 €</span>
+                </div>
+              </article>
+              <div class="line l-bottom desk-only"></div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="line l-top"></div>
+              <article class="cocktail-article">
+                <h3 class="cocktail-title">Chili-cheese</h3>
+                <p>
+                  Bread, beef, cheese, salad, tomatoes, onions, chili peppers
+                </p>
+                <div class="price-container">
+                  <span class="ct-art-price">8.50 €</span>
+                </div>
+              </article>
+              <div class="line l-bottom"></div>
             </div>
           </div>
         </div>
@@ -316,15 +278,6 @@
                 </div>
               </article>
               <div class="line l-bottom"></div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 col-lg-4">
-              <div class="btn-container">
-                <a href="menu.html" class="btn-more"
-                  >See the menu <span class="icons"></span>
-                </a>
-              </div>
             </div>
           </div>
         </div>
