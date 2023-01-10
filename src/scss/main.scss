@@ -104,44 +104,38 @@ header {
   .nav-ico {
     font-size: 16px;
   }
-
-  .cart-ico {
-    .cart-check,
-    .cart-alert {
-      display: none;
-    }
-
-    &.alert span {
-      &.cart-alert {
-        display: inline;
-      }
-      &.cart-check {
-        display: none;
-      }
-      &.cart-clean {
-        display: none;
-      }
-    }
-
-    &.check span {
-      &.cart-alert {
-        display: none;
-      }
-      &.cart-check {
-        display: inline;
-      }
-      &.cart-clean {
-        display: none;
-      }
-    }
-  }
 }
 
 .giant-logo-cont {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 52px 0;
+  padding: 200px 50px;
+}
+
+.stock-shot-cont {
+  position: relative;
+  width: 100%;
+  background-color:var(--color-main);
+  video {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+.intro-web {
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: brightness(60%);
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    filter: drop-shadow(0 0 100px #000);
+  }
 }
 
 .row-logo {
@@ -683,10 +677,6 @@ progress::-webkit-progress-value {
     }
   }
 
-  .logo-header {
-    user-select: none;
-  }
-
   .card-founder {
     font-size: 16px;
     padding: 33.75px 0 47.75px;
@@ -851,8 +841,13 @@ progress::-webkit-progress-value {
     display: none;
   }
 
-  .logo-header {
+  .logo-tiny-header {
     display: none;
+  }
+
+  .logo-header {
+    display: block;
+    width: 10%;
   }
 
   .card-founder {
