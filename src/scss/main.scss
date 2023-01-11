@@ -29,7 +29,9 @@
   --font-light: you-wont-have-it-light;
   --color-main: #000000;
   --color-second: #ffffff;
-  --color-enhanced: #ff0000;
+  --color-design: #ff002b;
+  --color-code: #4361ee;
+  --color-motion: #ffd60a;
 }
 
 /* ====================================
@@ -41,8 +43,8 @@
   margin: 0;
   padding: 0;
   ::selection {
-    background-color: var(--color-enhanced);
-    color: var(--color-second);
+    background-color: #999;
+    color: #000;
   }
 }
 
@@ -110,7 +112,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 200px 50px;
 }
 
 .stock-shot-cont {
@@ -164,7 +165,6 @@ nav {
 }
 
 .card-founder {
-  color: #fff;
   user-select: none;
 }
 
@@ -180,52 +180,33 @@ nav {
   width: 100%;
 }
 
-.text-container-header {
-  overflow: hidden;
-  border-bottom: solid #000 3px;
-  border-top: solid #000 3px;
-  display: flex;
-
-  .text-anim {
-    white-space: nowrap;
-    animation: scrollTxt 3s linear infinite;
-  }
-}
-
-@keyframes scrollTxt {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-10%);
-  }
-}
-
-.events {
+.portfolio {
   background-color: var(--color-main);
   color: var(--color-second);
   position: relative;
   overflow: hidden;
 
-  .event-article {
+  .portfolio-work {
     margin-bottom: 150px;
     z-index: 10;
-    .article-info {
-      .article-date {
+    .work-info {
+      .work-date {
         opacity: 30%;
         font-size: 26px;
         line-height: 31px;
       }
-      .article-title {
+      .work-title {
         font-size: 45px;
         line-height: 54px;
         font-weight: 600;
       }
-      .article-resume {
+      .work-resume {
         font-size: 28px;
         line-height: 33px;
       }
+    }
+    .work-info-left-side {
+      text-align: end;
     }
   }
 
@@ -282,7 +263,7 @@ figure {
 .cover-square {
   width: 25px;
   height: 25px;
-  background-color: var(--color-enhanced);
+  background-color: var(--color-second);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -298,16 +279,15 @@ figure {
 .coverSquareOn {
   width: 100%;
   height: 100%;
-  background-color: var(--color-enhanced);
+  background-color: var(--color-second);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px;
 
   .CS-input {
-    color: var(--color-second);
+    color: var(--color-main);
     display: block;
-    border: solid var(--color-second) 3px;
     padding: 15px;
     font-size: 40px;
     text-align: center;
@@ -338,29 +318,31 @@ figure {
   }
 }
 
-.cocktails {
-  .btn-more {
-    margin-top: 80px;
-    padding: 13px 17px;
-    font-size: 31px;
-    border: solid var(--color-main) 3px;
+.department {
+  .title-section {
+    
   }
-
-  .btn-more:hover {
-    border-color: var(--color-enhanced);
-  }
-
-  .line {
-    height: 3px;
-    width: 100%;
-    background-color: var(--color-main);
-    margin: 15px 0;
-  }
-
-  .l-bottom {
-    margin-top: 15px;
+  figure {
+  background-color: var(--color-code);
+  width: 100%;
+  aspect-ratio: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  overflow: hidden;
+    img {
+      transform: rotate(-90deg);
+    }
+    &.design-card {
+      background-color: var(--color-design);
+    }
+    &.motion-card{
+      background-color: var(--color-motion);
+    }
   }
 }
+
 
 footer {
   background-color: var(--color-main);
@@ -397,7 +379,7 @@ footer {
 }
 
 .hover-bg {
-  background-color: var(--color-enhanced);
+  background-color: var(--color-second);
   height: 100%;
   width: 0%;
   position: absolute;
@@ -464,7 +446,7 @@ progress::-webkit-progress-bar {
   border: none;
 }
 progress::-webkit-progress-value {
-  background: var(--color-enhanced);
+  background: var(--color-second);
   background-attachment: fixed;
   border: none;
 }
@@ -505,109 +487,6 @@ progress::-webkit-progress-value {
   }
 }
 
-.icons.reader-trigger {
-  span:last-child {
-    display: none;
-  }
-
-  &.is-muted span {
-    &:first-child {
-      display: none;
-    }
-    &:last-child {
-      display: inline;
-    }
-  }
-}
-
-.cart-main {
-  .title-section {
-    h2 {
-      padding: 68px 0 16px;
-    }
-  }
-
-  .checkout {
-    flex-direction: column;
-  }
-
-  .total-price {
-    font-size: 42px;
-    font-weight: 600;
-    font-style: italic;
-  }
-
-  .btn-more {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    margin: 12px 0 16px;
-  }
-  .dark-btn {
-    background-color: var(--color-main);
-    color: var(--color-second);
-  }
-
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-    .input-label {
-      font-size: 22px;
-      font-family: var(--font-light);
-      font-style: italic;
-    }
-    input {
-      border: solid var(--color-main) 3px;
-      padding: 12px 17px;
-      font-size: 31px;
-      // &:valid {
-      //   border: solid green 3px;
-      // }
-      &:invalid {
-        border: solid var(--color-enhanced) 3px;
-      }
-      &::placeholder {
-        opacity: 30%;
-      }
-    }
-  }
-
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    .input-city,
-    .input-card-expir {
-      width: 100%;
-    }
-    .input-card-cvc,
-    .input-nip {
-      width: 100%;
-    }
-    .input-container:first-child {
-      width: 170%;
-    }
-  }
-
-  .check-out {
-    padding: 0;
-  }
-
-  .cart-title-container {
-    display: flex;
-    flex-direction: column;
-    height: 154px;
-    .cocktail-title {
-      font-size: 43px;
-    }
-
-    p {
-      flex-grow: 1;
-      font-family: var(--font-light);
-    }
-  }
-}
 // ==============================================
 // media querries
 // ==============================================
@@ -625,7 +504,7 @@ progress::-webkit-progress-value {
     flex-direction: column;
     position: absolute;
     align-items: flex-start;
-    background-color: var(--color-enhanced);
+    background-color: var(--color-second);
     font-family: var(--font-light);
     font-size: 50px;
     height: 100vh;
@@ -693,22 +572,22 @@ progress::-webkit-progress-value {
     padding: 36px 0 22px;
   }
 
-  .events {
-    .event-article {
+  .portfolio {
+    .portfolio-work {
       margin-bottom: 40px;
-      .article-info {
+      .work-info {
         margin-top: 12px;
-        .article-date {
+        .work-date {
           opacity: 30%;
           font-size: 15px;
           line-height: 17px;
         }
-        .article-title {
+        .work-title {
           font-size: 34px;
           line-height: 40px;
           font-weight: 600;
         }
-        .article-resume {
+        .work-resume {
           font-size: 17px;
           line-height: 20px;
         }
@@ -732,52 +611,11 @@ progress::-webkit-progress-value {
     }
   }
 
-  .cocktails {
-    h2 {
-      padding: 36px 0 16px;
-    }
-
-    p {
-      font-size: 22px;
-    }
-
-    .title-section {
-      margin-bottom: 30px;
-    }
-
-    .cocktail-article {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      height: 154px;
-      .cocktail-title {
-        font-size: 43px;
-      }
-
-      p {
-        flex-grow: 1;
-        font-family: var(--font-light);
-      }
-
-      .price-container {
-        display: flex;
-        justify-content: end;
-        align-self: flex-end;
-        .ct-art-price {
-          font-style: italic;
-        }
-      }
-    }
-    .btn-more {
-      padding: 6px 16px;
-      font-size: 17px;
-      border: solid var(--color-main) 2px;
-      text-decoration: none;
-      transition: 0.3s;
-      transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-      span {
-        margin-left: 12px;
-      }
+  .department figure{
+    &:after {
+      width: 100px;
+      height: 100px;
+      margin: -50px;
     }
   }
 
@@ -851,10 +689,11 @@ progress::-webkit-progress-value {
   }
 
   .card-founder {
-    font-size: 45px;
+    font-size: 35px;
     padding: 168px 0;
     scale: 100%;
     transition: 1s;
+    color: var(--color-main);
 
     .micro-title {
       opacity: 0.47;
@@ -871,52 +710,17 @@ progress::-webkit-progress-value {
     padding: 68px 0 45px;
   }
 
-  .event-article {
-    margin-bottom: 150px;
-    .article-info-left-side {
-      text-align: end;
-    }
-  }
-
   .btn-container {
     margin-bottom: 90px;
   }
 
-  .cocktails {
+  .department {
     h2 {
       padding: 68px 0 16px;
     }
 
     p {
       font-size: 22px;
-    }
-
-    .title-section {
-      margin-bottom: 40px;
-    }
-
-    .cocktail-article {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      height: 174px;
-      .cocktail-title {
-        font-size: 43px;
-      }
-
-      p {
-        flex-grow: 1;
-        font-family: var(--font-light);
-      }
-
-      .price-container {
-        display: flex;
-        justify-content: end;
-        align-self: flex-end;
-        .ct-art-price {
-          font-style: italic;
-        }
-      }
     }
   }
 }
@@ -934,7 +738,7 @@ progress::-webkit-progress-value {
 }
 
 .btn-more:hover {
-  background-color: var(--color-enhanced);
-  color: var(--color-second);
-  border-color: var(--color-enhanced);
+  background-color: var(--color-second);
+  color: var(--color-main);
+  border-color: var(--color-second);
 }
