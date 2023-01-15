@@ -1,10 +1,17 @@
-@import "base";
-@import "layout";
-@import "modules/example";
-
 /* ====================================
 // css variables
 // ==================================== */
+
+:root {
+  --icon-font: fa-sharp;
+  --font-main: you-wont-have-it;
+  --font-light: you-wont-have-it-light;
+  --color-main: #000000;
+  --color-second: #ffffff;
+  --color-design: #ff002b;
+  --color-code: #4361ee;
+  --color-motion: #ffd60a;
+}
 
 @import "bootstrap/scss/bootstrap-grid";
 
@@ -23,16 +30,9 @@
   src: url(../fonts/HelveticaNeue-Light-08.woff2) format(woff2);
 }
 
-:root {
-  --icon-font: fa-sharp;
-  --font-main: you-wont-have-it;
-  --font-light: you-wont-have-it-light;
-  --color-main: #000000;
-  --color-second: #ffffff;
-  --color-design: #ff002b;
-  --color-code: #4361ee;
-  --color-motion: #ffd60a;
-}
+@import "base";
+@import "layout";
+@import "modules/in-header";
 
 /* ====================================
 // reset rules
@@ -106,6 +106,27 @@ header {
   .nav-ico {
     font-size: 16px;
   }
+
+  .spec-design:hover {
+    color: var(--color-design);
+    .underline {
+      background-color: var(--color-design);
+    }
+  }
+
+  .spec-code:hover {
+    color: var(--color-code);
+    .underline {
+      background-color: var(--color-code);
+    }
+  }
+
+  .spec-motion:hover {
+    color: var(--color-motion);
+    .underline {
+      background-color: var(--color-motion);
+    }
+  }
 }
 
 .giant-logo-cont {
@@ -114,10 +135,59 @@ header {
   align-items: center;
 }
 
+.logo-intro:hover {
+  #logo-presentation-s-rect1_to {
+    animation: logo-presentation-s-rect1_to__to 3000ms linear 1 normal forwards;
+  }
+  @keyframes logo-presentation-s-rect1_to__to {
+    0% {
+      transform: translate(229.211771px, 42.550001px);
+      animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    10% {
+      transform: translate(603.760679px, 42.55px);
+    }
+    100% {
+      transform: translate(603.760679px, 42.55px);
+    }
+  }
+  #logo-presentation-s-rect2_to {
+    animation: logo-presentation-s-rect2_to__to 3000ms linear 1 normal forwards;
+  }
+  @keyframes logo-presentation-s-rect2_to__to {
+    0% {
+      transform: translate(80.593403px, 43.871701px);
+      animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    10% {
+      transform: translate(408.323697px, 43.871701px);
+    }
+    100% {
+      transform: translate(408.323697px, 43.871701px);
+    }
+  }
+  #logo-presentation-s-polygon2_to {
+    animation: logo-presentation-s-polygon2_to__to 3000ms linear 1 normal
+      forwards;
+  }
+  @keyframes logo-presentation-s-polygon2_to__to {
+    0% {
+      transform: translate(94.250003px, 42.450002px);
+      animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+    10% {
+      transform: translate(421.980296px, 42.450002px);
+    }
+    100% {
+      transform: translate(421.980296px, 42.450002px);
+    }
+  }
+}
+
 .stock-shot-cont {
   position: relative;
   width: 100%;
-  background-color:var(--color-main);
+  background-color: var(--color-main);
   video {
     width: 100%;
     aspect-ratio: 16/9;
@@ -169,7 +239,7 @@ nav {
 }
 
 .underline {
-  height: 1px;
+  height: 2px;
   width: 0%;
   background-color: #fff;
   transition: 0.3s;
@@ -293,6 +363,10 @@ figure {
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(110%);
+    }
 
     a {
       text-decoration: none;
@@ -319,30 +393,41 @@ figure {
 }
 
 .department {
+  margin: 0 0 100px;
+
   .title-section {
-    
+    margin-bottom: 45px;
   }
   figure {
-  background-color: var(--color-code);
-  width: 100%;
-  aspect-ratio: 3/4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
-  overflow: hidden;
+    background-color: var(--color-code);
+    background-image: none;
+    width: 100%;
+    aspect-ratio: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    overflow: hidden;
+    transition: all 0.3s;
+    &.depart-card {
+      &:hover {
+        background-color: none;
+        background-image: url(../img/newyearfest.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
     img {
       transform: rotate(-90deg);
     }
     &.design-card {
       background-color: var(--color-design);
     }
-    &.motion-card{
+    &.motion-card {
       background-color: var(--color-motion);
     }
   }
 }
-
 
 footer {
   background-color: var(--color-main);
@@ -364,6 +449,9 @@ footer {
   display: flex;
   gap: 50px;
   position: relative;
+  &:hover {
+    color: var(--color-main);
+  }
   span.list-dot {
     margin-left: 20px;
     font-size: 27px;
@@ -611,7 +699,7 @@ progress::-webkit-progress-value {
     }
   }
 
-  .department figure{
+  .department figure {
     &:after {
       width: 100px;
       height: 100px;

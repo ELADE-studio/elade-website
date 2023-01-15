@@ -11,6 +11,14 @@ gsap.to("progress", {
   scrollTrigger: { scrub: 0.3 },
 });
 
+gsap.to(".in-header", {
+  ScrollTrigger: {
+    trigger: ".in-header",
+    start: "top",
+    
+  }
+})
+
 gsap.to(".line-bg", {
   scrollTrigger: {
     trigger: ".line-bg",
@@ -102,6 +110,8 @@ window.addEventListener("blur", () => {
 window.addEventListener("focus", () => {
   document.title = docTitle;
 });
+
+
 
 // 1
 // testfunction = function () {
